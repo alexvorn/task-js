@@ -23,3 +23,27 @@ console.log(calculator.sum());
 // }
 
 // var tomFormat = 
+
+
+//electricKettle
+
+class electricKettle ( _status ) {
+    this._status = true; // true - включен, false - выключен
+    this._capState = false; // крышка закрыта, true - открыта
+
+}
+
+electricKettle.prototype.openCap = function () {
+    this._capState = true;
+    console.log("Крышка открыта")
+};
+
+electricKettle.prototype.closeCap = function () {
+    this._capState = false;
+    console.log("Крышка закрыта")
+};
+
+electricKettle.prototype.getCapState = function () {
+    return this._capState ? "open" : "close";
+};
+
